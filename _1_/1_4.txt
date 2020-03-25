@@ -1,0 +1,22 @@
+
+PS C:\Users\Elitebook> docker run -d -it devopsdockeruh/exec_bash_exercise
+
+PS C:\Users\Elitebook> docker container ls
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS               NAMES
+ff0aabb7ed4e        devopsdockeruh/exec_bash_exercise   "node index"        31 hours ago        Up 10 minutes                           zealous_blackburn
+PS C:\Users\Elitebook> docker exec -it ff bash
+
+root@ff0aabb7ed4e:/usr/app# tail -f ./logs.txt
+Mon, 23 Mar 2020 04:27:35 GMT
+Mon, 23 Mar 2020 04:27:38 GMT
+Secret message is:
+"Docker is easy"
+Mon, 23 Mar 2020 04:27:44 GMT
+Mon, 23 Mar 2020 04:27:47 GMT
+Mon, 23 Mar 2020 04:27:50 GMT
+Mon, 23 Mar 2020 04:27:53 GMT
+Secret message is:
+"Docker is easy"
+Mon, 23 Mar 2020 04:27:59 GMT
+^C
+root@ff0aabb7ed4e:/usr/app#
