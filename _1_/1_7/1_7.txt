@@ -1,0 +1,32 @@
+PS C:\Users\Elitebook\Documents\Docker\mydir> docker build -t curler .
+Sending build context to Docker daemon  5.632kB
+Step 1/5 : FROM ubuntu:16.04
+ ---> 77be327e4b63
+Step 2/5 : WORKDIR /mydir
+ ---> Using cache
+ ---> ed2b683bf39c
+Step 3/5 : RUN apt-get update && apt-get install -y curl
+ ---> Using cache
+ ---> 44a2c12313c8
+Step 4/5 : COPY website.sh .
+ ---> Using cache
+ ---> 95100370cc18
+Step 5/5 : CMD ./website.sh
+ ---> Running in 260792a44c67
+Removing intermediate container 260792a44c67
+ ---> a98724f17066
+Successfully built a98724f17066
+Successfully tagged curler:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+PS C:\Users\Elitebook\Documents\Docker\mydir> docker run -it curler
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+PS C:\Users\Elitebook\Documents\Docker\mydir>
