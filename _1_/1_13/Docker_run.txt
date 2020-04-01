@@ -1,0 +1,1 @@
+PS C:\Users\Elitebook\Documents\Docker> docker run -it -p 8080:8080 exercise_1_13

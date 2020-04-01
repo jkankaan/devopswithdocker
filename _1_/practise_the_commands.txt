@@ -1,0 +1,6 @@
+PS C:\Users\Elitebook\Documents\Docker\mydir> docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+fd96296199dd        nginx               "nginx -g 'daemon of…"   19 hours ago        Exited (0) 19 seconds ago                       reverent_chatelet
+d24cd5f4ca57        nginx               "nginx -g 'daemon of…"   19 hours ago        Exited (0) 10 seconds ago                       relaxed_snyder
+0e4fed02b914        nginx               "nginx -g 'daemon of…"   19 hours ago        Up 3 minutes                80/tcp              blissful_maxwell
+PS C:\Users\Elitebook\Documents\Docker\mydir>

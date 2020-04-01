@@ -1,0 +1,2 @@
+PS C:\Users\Elitebook\Documents\Docker\mydir> docker run -d -it -p 1234:80 devopsdockeruh/ports_exercise
+eebda67cc617ba5c8ed37e24196558b3fbf651d57bcdd117af16357a05ed93d6

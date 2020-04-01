@@ -1,0 +1,1 @@
+PS C:\Users\Elitebook\Documents\Docker\mydir> docker run -it -p 5000:5000 exercise_1_10
