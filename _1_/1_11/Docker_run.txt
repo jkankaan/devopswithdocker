@@ -1,0 +1,1 @@
+PS C:\Users\Elitebook\Documents\Docker\mydir\1_11> docker run -it -p 8000:8000 -v C:/Users/Elitebook/Documents/Docker/mydir/1_11/logs.txt:/backend-example-docker/logs.txt exercise_1_11
