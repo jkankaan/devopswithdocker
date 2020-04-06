@@ -1,0 +1,16 @@
+FROM ruby:2.6 
+WORKDIR /usr/src/app
+RUN apt-get install -y git
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN apt install -y nodejs
+RUN node -v && npm -v
+RUN git clone https://github.com/docker-hy/rails-example-project.git
+RUN apt-get install -y bash
+RUN apt-get install -y emacs
+
+WORKDIR /usr/src/app/rails-example-project
+#RUN bundle install && rails db:migrate
+
+#CMD ["rails","s"]
+
+Last RUN and CMD ran after changing Ruby version to 2.6.6 in Gemfile
