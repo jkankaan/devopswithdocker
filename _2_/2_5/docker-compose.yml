@@ -1,0 +1,20 @@
+version: '3' 
+
+services: 
+
+    database:
+      image: redis:alpine
+
+    frontend: 
+      image: exercise_1_10  
+      ports: 
+        - 5000:5000
+
+    backend: 
+      image: exercise_1_11  
+      ports: 
+        - 8000:8000
+      volumes:
+        - ./logs.txt:/usr/app/logs.txt
+      environment:
+        - REDIS=database
